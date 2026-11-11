@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<ContentPage
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="jtipanS6.Views.vEstudiante"
+    Title="Estudiantes"
+    BackgroundColor="#F4F7FB">
+
+    <Grid Padding="15"
+          RowDefinitions="Auto,Auto,*"
+          RowSpacing="15">
+
+        <!-- Título principal -->
+        <Border Grid.Row="0"
+                BackgroundColor="#173B70"
+                StrokeThickness="0"
+                StrokeShape="RoundRectangle 12"
+                Padding="20">
+
+            <VerticalStackLayout Spacing="5">
+
+                <Label
+                    Text="Semana 6: Servicios Web"
+                    FontSize="22"
+                    FontAttributes="Bold"
+                    TextColor="White"
+                    HorizontalOptions="Center"/>
+
+                <Label
+                    Text="Listado de Estudiantes"
+                    FontSize="15"
+                    TextColor="#D8E7FF"
+                    HorizontalOptions="Center"/>
+
+            </VerticalStackLayout>
+        </Border>
+
+        <!-- Encabezado de la tabla -->
+        <Border Grid.Row="1"
+                BackgroundColor="#DCE9FB"
+                Stroke="#C5D6ED"
+                StrokeThickness="1"
+                StrokeShape="RoundRectangle 8"
+                Padding="10">
+
+            <Grid ColumnDefinitions="70,*,*,55"
+                  ColumnSpacing="5">
+
+                <Label Grid.Column="0"
+                       Text="Código"
+                       FontAttributes="Bold"
+                       TextColor="#173B70"
+                       HorizontalTextAlignment="Center"/>
+
+                <Label Grid.Column="1"
+                       Text="Nombre"
+                       FontAttributes="Bold"
+                       TextColor="#173B70"
+                       HorizontalTextAlignment="Center"/>
+
+                <Label Grid.Column="2"
+                       Text="Apellido"
+                       FontAttributes="Bold"
+                       TextColor="#173B70"
+                       HorizontalTextAlignment="Center"/>
+
+                <Label Grid.Column="3"
+                       Text="Edad"
+                       FontAttributes="Bold"
+                       TextColor="#173B70"
+                       HorizontalTextAlignment="Center"/>
+
+            </Grid>
+        </Border>
+
+        <!-- Lista de estudiantes -->
+        <ListView Grid.Row="2"
+                  x:Name="listaEstudiante"
+                  BackgroundColor="Transparent"
+                  SeparatorVisibility="None"
+                  HasUnevenRows="True"
+                  SelectionMode="None">
+
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+
+                        <Border
+                            BackgroundColor="White"
+                            Stroke="#E0E6EF"
+                            StrokeThickness="1"
+                            StrokeShape="RoundRectangle 8"
+                            Margin="0,3"
+                            Padding="10,14">
+
+                            <Grid ColumnDefinitions="70,*,*,55"
+                                  ColumnSpacing="5">
+
+                                <Label
+                                    Grid.Column="0"
+                                    Text="{Binding codigo}"
+                                    FontAttributes="Bold"
+                                    TextColor="#2563EB"
+                                    HorizontalTextAlignment="Center"
+                                    VerticalTextAlignment="Center"/>
+
+                                <Label
+                                    Grid.Column="1"
+                                    Text="{Binding nombre}"
+                                    TextColor="#263238"
+                                    HorizontalTextAlignment="Center"
+                                    VerticalTextAlignment="Center"
+                                    LineBreakMode="TailTruncation"/>
+
+                                <Label
+                                    Grid.Column="2"
+                                    Text="{Binding apellido}"
+                                    TextColor="#263238"
+                                    HorizontalTextAlignment="Center"
+                                    VerticalTextAlignment="Center"
+                                    LineBreakMode="TailTruncation"/>
+
+                                <Label
+                                    Grid.Column="3"
+                                    Text="{Binding edad}"
+                                    TextColor="#263238"
+                                    HorizontalTextAlignment="Center"
+                                    VerticalTextAlignment="Center"/>
+
+                            </Grid>
+
+                        </Border>
+
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+
+        </ListView>
+
+    </Grid>
+
+</ContentPage>
