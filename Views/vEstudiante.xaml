@@ -8,7 +8,7 @@
     BackgroundColor="#F4F7FB">
 
     <Grid Padding="15"
-          RowDefinitions="Auto,Auto,*"
+          RowDefinitions="Auto,Auto,*,Auto"
           RowSpacing="15">
 
         <!-- Título principal -->
@@ -80,7 +80,8 @@
                   BackgroundColor="Transparent"
                   SeparatorVisibility="None"
                   HasUnevenRows="True"
-                  SelectionMode="None">
+                  SelectionMode="Single"
+                  ItemSelected="listaEstudiante_ItemSelected">
 
             <ListView.ItemTemplate>
                 <DataTemplate>
@@ -137,6 +138,19 @@
             </ListView.ItemTemplate>
 
         </ListView>
+
+        <Button x:Name="btnAgregarEstudiante"
+                Grid.Row="3"
+                Text="+ Agregar Estudiante"
+                Clicked="btnAgregarEstudiante_Clicked"
+                 BackgroundColor="#173B70"
+                TextColor="White"
+                FontSize="16"
+                FontAttributes="Bold"
+                CornerRadius="12"
+                HeightRequest="55"
+                HorizontalOptions="Fill"
+                Margin="0,5,0,10"/>
 
     </Grid>
 

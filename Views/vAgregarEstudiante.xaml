@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<ContentPage
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="jtipanS6.Views.vAgregarEstudiante"
+    Title="Agregar Estudiante"
+    BackgroundColor="#F4F7FB">
+
+    <ScrollView>
+        <VerticalStackLayout
+            Padding="15"
+            Spacing="20">
+
+            <!-- Encabezado principal -->
+            <Border
+                BackgroundColor="#173B70"
+                StrokeThickness="0"
+                StrokeShape="RoundRectangle 12"
+                Padding="20">
+
+                <VerticalStackLayout Spacing="6">
+
+                    <Label
+                        Text="Registro de Estudiantes"
+                        FontSize="22"
+                        FontAttributes="Bold"
+                        TextColor="White"
+                        HorizontalOptions="Center"
+                        HorizontalTextAlignment="Center"/>
+
+                    <Label
+                        Text="Semana 7: Servicios Web"
+                        FontSize="14"
+                        TextColor="#D8E7FF"
+                        HorizontalOptions="Center"/>
+
+                </VerticalStackLayout>
+            </Border>
+
+            <!-- Formulario de registro -->
+            <Border
+                BackgroundColor="White"
+                Stroke="#E0E6EF"
+                StrokeThickness="1"
+                StrokeShape="RoundRectangle 12"
+                Padding="20">
+
+                <VerticalStackLayout Spacing="15">
+
+                    <Label
+                        Text="Datos del nuevo estudiante"
+                        FontSize="18"
+                        FontAttributes="Bold"
+                        TextColor="#173B70"/>
+
+                    <!-- Nombre -->
+                    <VerticalStackLayout Spacing="5">
+
+                        <Label
+                            Text="Nombre"
+                            FontSize="14"
+                            FontAttributes="Bold"
+                            TextColor="#334155"/>
+
+                        <Entry
+                            x:Name="txtNombre"
+                            Placeholder="Ingresa el nombre"
+                            BackgroundColor="#F8FAFC"
+                            TextColor="#263238"
+                            PlaceholderColor="#94A3B8"
+                            FontSize="16"/>
+
+                    </VerticalStackLayout>
+
+                    <!-- Apellido -->
+                    <VerticalStackLayout Spacing="5">
+
+                        <Label
+                            Text="Apellido"
+                            FontSize="14"
+                            FontAttributes="Bold"
+                            TextColor="#334155"/>
+
+                        <Entry
+                            x:Name="txtApellido"
+                            Placeholder="Ingresa el apellido"
+                            BackgroundColor="#F8FAFC"
+                            TextColor="#263238"
+                            PlaceholderColor="#94A3B8"
+                            FontSize="16"/>
+
+                    </VerticalStackLayout>
+
+                    <!-- Edad -->
+                    <VerticalStackLayout Spacing="5">
+
+                        <Label
+                            Text="Edad"
+                            FontSize="14"
+                            FontAttributes="Bold"
+                            TextColor="#334155"/>
+
+                        <Entry
+                            x:Name="txtEdad"
+                            Placeholder="Ingresa la edad"
+                            Keyboard="Numeric"
+                            BackgroundColor="#F8FAFC"
+                            TextColor="#263238"
+                            PlaceholderColor="#94A3B8"
+                            FontSize="16"/>
+
+                    </VerticalStackLayout>
+
+                </VerticalStackLayout>
+            </Border>
+
+            <!-- Botones de acción -->
+            <Grid
+                ColumnDefinitions="*,*"
+                ColumnSpacing="12">
+
+                <Button
+                    x:Name="btnAgregar"
+                    Grid.Column="0"
+                    Text="Agregar"
+                    Clicked="btnAgregar_Clicked"
+                    BackgroundColor="#173B70"
+                    TextColor="White"
+                    FontSize="16"
+                    FontAttributes="Bold"
+                    CornerRadius="12"
+                    HeightRequest="55"/>
+
+                <Button
+                    x:Name="btnCancelar"
+                    Grid.Column="1"
+                    Text="Cancelar"
+                    Clicked="btnCancelar_Clicked"
+                    BackgroundColor="#64748B"
+                    TextColor="White"
+                    FontSize="16"
+                    FontAttributes="Bold"
+                    CornerRadius="12"
+                    HeightRequest="55"/>
+
+            </Grid>
+
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>
